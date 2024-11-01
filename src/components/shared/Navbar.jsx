@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosSearch } from "react-icons/io";
 import { CiCircleQuestion } from "react-icons/ci";
@@ -6,7 +6,9 @@ import { CiSettings } from "react-icons/ci";
 import { PiDotsNineBold } from "react-icons/pi";
 import Avatar from "react-avatar";
 
+
 function Navbar() {
+
     return (
       <div className="flex items-center justify-between px-3 h-16">
         {/* Left Section - Logo and Title */}

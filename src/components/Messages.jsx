@@ -7,6 +7,8 @@ import {setEmails} from '../redux/appSlice'
 
 function Messages() {
   const { emails } = useSelector(store => store.app);
+ 
+
   const dispatch = useDispatch();
   console.log(emails);
 

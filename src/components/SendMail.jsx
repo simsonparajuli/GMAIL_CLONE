@@ -51,7 +51,7 @@ function SendMail() {
         </button>
       </div>
       <form onSubmit={submitHandler} className='flex flex-col p-3 gap-2'>
-        <input onChange={changeHandler} value={formData.recipients} name="to" type="text" placeholder='Recipients' className='outline-none py-1' />
+        <input onChange={changeHandler} value={formData.to} name="to" type="text" placeholder='Recipients' className='outline-none py-1' />
         <input onChange={changeHandler} value={formData.subject} name="subject" type="text" placeholder='Subject' className='outline-none py-1' />
         <textarea onChange={changeHandler} value = {formData.message} name="message" cols="30" rows="10" className='outline-none py-1'></textarea>
         {/* Make sure the submit button explicitly has type="submit" */}
