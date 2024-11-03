@@ -4,8 +4,8 @@ import Sidebar from "./components/Sidebar"
 import Body from "./components/Body"
 import Inbox from "./components/Inbox"
 import Mail from "./components/Mail"
-import SendMail from "./components/SendMail"
 import { useDispatch, useSelector } from 'react-redux';
+import Login from "./components/Login"
 
 // react router 
 const myRouter = createBrowserRouter([
@@ -26,12 +26,29 @@ const myRouter = createBrowserRouter([
 ])
 
 function App() {
+
+  // const {user} = useSelector(store => store.app);
+  const user = true;
+  console.log(user);
+  
+
   const dispatch = useDispatch();
 
   return (
     <div className="bg-[#F6F8FC] h-screen w-screen overflow-hidden">
-      <Navbar/>
-        <RouterProvider router={myRouter}/>
+      {
+        (!user) 
+              ?
+         (<Login/>) 
+              :
+         (<>
+          <Navbar/>
+         <RouterProvider router={myRouter}/>
+         </>)
+      }
+
+      
+        
 
     </div>
   )

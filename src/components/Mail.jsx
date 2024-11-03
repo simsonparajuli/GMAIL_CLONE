@@ -20,6 +20,7 @@ import {db} from '../firebase'
 function Mail() {
 
   const {selectedEmail} = useSelector(store => store.app);
+  
   const navigate = useNavigate();
   // Getting params of URL 
   const params = useParams();

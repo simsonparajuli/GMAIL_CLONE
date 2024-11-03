@@ -9,6 +9,8 @@ import Avatar from "react-avatar";
 
 function Navbar() {
 
+  const [toggle, setToggle] = useState(false);
+
     return (
       <div className="flex items-center justify-between px-3 h-16">
         {/* Left Section - Logo and Title */}
@@ -53,6 +55,7 @@ function Navbar() {
           {/* Avatar Icon */}
           <div className="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
             <Avatar
+              onClick={()=>setToggle(!toggle)}
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
               size="32"
               round={true}

@@ -8,11 +8,11 @@ import {setSelectedEmail} from '../redux/appSlice'
 function Message({email}) {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
     const openMail = () => {
         dispatch(setSelectedEmail(email));
         navigate(`/mail/${email.id}`);
     }
-
   
   return (
     <div onClick={openMail} className="flex item-start justify-between border-b border-gray-200 px-4 py-3 text-sm hover: cursor-pointer hover:shadow-md">
@@ -22,6 +22,9 @@ function Message({email}) {
         </div>
         <div className="flex-none text-gray-300">
           <RiStarLine className="w-5 h-5" />
+        </div>
+        <div>
+          <h1 className="font-semibold">{email?.to}</h1>
         </div>
         <div>
           <h1 className="font-semibold"></h1>
